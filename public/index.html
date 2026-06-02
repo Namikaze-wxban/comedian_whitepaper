@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comedian Whitepaper</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-  <h1>Comedian Whitepaper</h1>
+<body class="min-h-screen bg-neutral-950 text-white">
+  <main class="flex min-h-screen items-center justify-center px-6">
+    <a
+      id="downloadBtn"
+      class="inline-flex items-center justify-center rounded-full bg-emerald-500 px-8 py-4 text-lg font-semibold text-neutral-950 transition duration-200 hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2 focus:ring-offset-neutral-950"
+      href="/Comedian_Whitepaper_v1.0.pdf"
+      download="Comedian_Whitepaper_v1.0.pdf"
+    >
+      📄 Download Comedian Whitepaper
+    </a>
+  </main>
 
-  <a href="/Comedian_Whitepaper_v1.0.pdf">
-    📄 Download Whitepaper
-  </a>
+  <script>
+    const downloadUrl = "/Comedian_Whitepaper_v1.0.pdf";
+    const downloadName = "Comedian_Whitepaper_v1.0.pdf";
+
+    const button = document.getElementById("downloadBtn");
+    button.href = downloadUrl;
+    button.download = downloadName;
+  </script>
 </body>
 </html>
